@@ -1,13 +1,13 @@
 import { hexToBytes } from '@metamask/utils';
 
-import type { ExtendedKey } from './extended-keys';
+import type { ExtendedKey } from './extended-keys.js';
 import {
   decodeExtendedKey,
   encodeExtendedKey,
   PRIVATE_KEY_VERSION,
   PUBLIC_KEY_VERSION,
-} from './extended-keys';
-import { hexStringToBytes } from './utils';
+} from './extended-keys.js';
+import { hexStringToBytes } from './utils.js';
 
 describe('decodeExtendedKey', () => {
   it('decodes an extended public key', () => {

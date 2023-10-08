@@ -1,13 +1,13 @@
-import type { SLIP10Node, HDPathTuple } from '../src';
-import { BIP44Node, BIP44PurposeNodeToken } from '../src';
-import { ed25519, secp256k1 } from '../src/curves';
-import { deriveKeyFromPath } from '../src/derivation';
-import { createBip39KeyFromSeed } from '../src/derivers/bip39';
+import { ed25519, secp256k1 } from '../src/curves/index.js';
+import { deriveKeyFromPath } from '../src/derivation.js';
+import { createBip39KeyFromSeed } from '../src/derivers/bip39.js';
+import { BIP44Node, BIP44PurposeNodeToken } from '../src/index.js';
+import type { SLIP10Node, HDPathTuple } from '../src/index.js';
 import {
   getBIP44CoinTypeToAddressPathTuple,
   hexStringToBytes,
-} from '../src/utils';
-import fixtures from './fixtures';
+} from '../src/utils.js';
+import fixtures from './fixtures.js';
 
 describe('reference implementation tests', () => {
   describe('local', () => {

@@ -4,12 +4,12 @@ import { assert } from '@metamask/utils';
 import { hmac } from '@noble/hashes/hmac';
 import { sha512 } from '@noble/hashes/sha512';
 
-import type { DeriveChildKeyArgs } from '.';
-import type { BIP39StringNode } from '../constants';
-import { BYTES_KEY_LENGTH } from '../constants';
-import type { Curve } from '../curves';
-import { SLIP10Node } from '../SLIP10Node';
-import { getFingerprint } from '../utils';
+import { BYTES_KEY_LENGTH } from '../constants.js';
+import type { BIP39StringNode } from '../constants.js';
+import type { Curve } from '../curves/index.js';
+import { SLIP10Node } from '../SLIP10Node.js';
+import { getFingerprint } from '../utils.js';
+import type { DeriveChildKeyArgs } from './index.js';
 
 /**
  * Convert a BIP-39 mnemonic phrase to a multi path.

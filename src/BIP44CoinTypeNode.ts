@@ -1,18 +1,18 @@
 import { assert } from '@metamask/utils';
 
-import type { BIP44NodeInterface, JsonBIP44Node } from './BIP44Node';
-import { BIP44Node } from './BIP44Node';
+import type { BIP44NodeInterface, JsonBIP44Node } from './BIP44Node.js';
+import { BIP44Node } from './BIP44Node.js';
 import type {
   BIP39Node,
   BIP44Depth,
   BIP44PurposeNodeToken,
   CoinTypeHDPathString,
   HardenedBIP32Node,
-} from './constants';
-import { BIP_32_HARDENED_OFFSET } from './constants';
-import type { SupportedCurve } from './curves';
-import { deriveChildNode } from './SLIP10Node';
-import type { CoinTypeToAddressIndices } from './utils';
+} from './constants.js';
+import { BIP_32_HARDENED_OFFSET } from './constants.js';
+import type { SupportedCurve } from './curves/index.js';
+import { deriveChildNode } from './SLIP10Node.js';
+import type { CoinTypeToAddressIndices } from './utils.js';
 import {
   getBIP32NodeToken,
   getBIP44ChangePathString,
@@ -22,7 +22,7 @@ import {
   getUnhardenedBIP32NodeToken,
   hexStringToBytes,
   nullableHexStringToBytes,
-} from './utils';
+} from './utils.js';
 
 export type CoinTypeHDPathTuple = [
   BIP39Node,

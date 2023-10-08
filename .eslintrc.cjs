@@ -11,6 +11,8 @@ module.exports = {
         allow: ['^UNSAFE_', 'coin_type', 'address_index'],
       },
     ],
+    'import/extensions': ['error'],
+    'import/no-useless-path-segments': ['off'],
   },
 
   overrides: [
@@ -63,7 +65,7 @@ module.exports = {
     },
 
     {
-      files: ['*.js'],
+      files: ['*.js', '*.cjs'],
       parserOptions: {
         sourceType: 'script',
       },
@@ -80,8 +82,8 @@ module.exports = {
   ],
 
   ignorePatterns: [
-    '!.eslintrc.js',
-    '!.prettierrc.js',
+    '!.eslintrc.cjs',
+    '!.prettierrc.cjs',
     'dist/',
     'docs/',
     '.yarn/',

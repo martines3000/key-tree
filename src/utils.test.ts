@@ -2,8 +2,8 @@ import { mnemonicToSeed } from '@metamask/scure-bip39';
 import { wordlist } from '@metamask/scure-bip39/dist/wordlists/english';
 import { hexToBytes, stringToBytes } from '@metamask/utils';
 
-import fixtures from '../test/fixtures';
-import { BIP44Node } from './BIP44Node';
+import fixtures from '../test/fixtures.js';
+import { BIP44Node } from './BIP44Node.js';
 import {
   getBIP32NodeToken,
   getBIP44ChangePathString,
@@ -24,7 +24,7 @@ import {
   mnemonicPhraseToBytes,
   getBytesUnsafe,
   isValidBIP32PathSegment,
-} from './utils';
+} from './utils.js';
 
 // Inputs used for testing non-negative integers
 const inputs = [-1, 1.1, NaN, {}, null, undefined] as number[];

@@ -1,13 +1,13 @@
 import { assert, bytesToHex } from '@metamask/utils';
 
-import type { BIP44CoinTypeNode } from './BIP44CoinTypeNode';
-import type { BIP44Node } from './BIP44Node';
-import type { RootedSLIP10PathTuple, SLIP10PathTuple } from './constants';
-import { BYTES_KEY_LENGTH } from './constants';
-import type { SupportedCurve } from './curves';
-import { getCurveByName } from './curves';
-import { deriveKeyFromPath } from './derivation';
-import { publicKeyToEthAddress } from './derivers/bip32';
+import type { BIP44CoinTypeNode } from './BIP44CoinTypeNode.js';
+import type { BIP44Node } from './BIP44Node.js';
+import { BYTES_KEY_LENGTH } from './constants.js';
+import type { RootedSLIP10PathTuple, SLIP10PathTuple } from './constants.js';
+import { getCurveByName } from './curves/index.js';
+import type { SupportedCurve } from './curves/index.js';
+import { deriveKeyFromPath } from './derivation.js';
+import { publicKeyToEthAddress } from './derivers/bip32.js';
 import {
   getBytes,
   getBytesUnsafe,
@@ -15,7 +15,7 @@ import {
   isValidInteger,
   validateBIP32Index,
   validateCurve,
-} from './utils';
+} from './utils.js';
 
 /**
  * A wrapper for SLIP-10 Hierarchical Deterministic (HD) tree nodes, i.e.

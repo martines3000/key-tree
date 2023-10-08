@@ -12,15 +12,15 @@ import type {
   HardenedBIP32Node,
   UnhardenedBIP32Node,
   UnprefixedNode,
-} from './constants';
+} from './constants.js';
 import {
   BIP44PurposeNodeToken,
   MAX_BIP_32_INDEX,
   MAX_UNHARDENED_BIP_32_INDEX,
   UNPREFIXED_BIP_32_PATH_REGEX,
-} from './constants';
-import type { SupportedCurve } from './curves';
-import { curves } from './curves';
+} from './constants.js';
+import type { SupportedCurve } from './curves/index.js';
+import { curves } from './curves/index.js';
 
 /**
  * Gets a string representation of a BIP-44 path of depth 2, i.e.:

@@ -7,7 +7,7 @@ import {
   isValidBIP32PathSegment,
   createBip39KeyFromSeed,
   mnemonicPhraseToBytes,
-} from '.';
+} from './index.js';
 
 // This is purely for coverage shenanigans
 describe('index', () => {

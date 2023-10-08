@@ -1,15 +1,15 @@
 import { bytesToHex } from '@metamask/utils';
 
-import { BIP44Node, BIP44PurposeNodeToken, secp256k1 } from '.';
-import fixtures from '../test/fixtures';
-import { compressPublicKey } from './curves/secp256k1';
-import { createBip39KeyFromSeed, deriveChildKey } from './derivers/bip39';
+import fixtures from '../test/fixtures.js';
+import { compressPublicKey } from './curves/secp256k1.js';
+import { createBip39KeyFromSeed, deriveChildKey } from './derivers/bip39.js';
 import {
   encodeExtendedKey,
   PRIVATE_KEY_VERSION,
   PUBLIC_KEY_VERSION,
-} from './extended-keys';
-import { hexStringToBytes, mnemonicPhraseToBytes } from './utils';
+} from './extended-keys.js';
+import { BIP44Node, BIP44PurposeNodeToken, secp256k1 } from './index.js';
+import { hexStringToBytes, mnemonicPhraseToBytes } from './utils.js';
 
 const defaultBip39NodeToken = `bip39:${fixtures.local.mnemonic}` as const;
 const defaultBip39BytesToken = mnemonicPhraseToBytes(fixtures.local.mnemonic);

@@ -1,18 +1,18 @@
 import { assert } from '@metamask/utils';
 import { keccak_256 as keccak256 } from '@noble/hashes/sha3';
 
-import type { DeriveChildKeyArgs } from '.';
-import { BYTES_KEY_LENGTH } from '../constants';
-import { secp256k1 } from '../curves';
-import type { SLIP10Node } from '../SLIP10Node';
-import { isValidBytesKey, validateBIP32Index } from '../utils';
-import type { DeriveNodeArgs } from './shared';
+import { BYTES_KEY_LENGTH } from '../constants.js';
+import { secp256k1 } from '../curves/index.js';
+import type { SLIP10Node } from '../SLIP10Node.js';
+import { isValidBytesKey, validateBIP32Index } from '../utils.js';
+import type { DeriveChildKeyArgs } from './index.js';
+import type { DeriveNodeArgs } from './shared.js';
 import {
   deriveChildKey as sharedDeriveChildKey,
   deriveSecretExtension,
   generateEntropy,
   derivePublicExtension,
-} from './shared';
+} from './shared.js';
 
 /**
  * Converts a BIP-32 private key to an Ethereum address.

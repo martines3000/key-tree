@@ -1,8 +1,12 @@
 import { createDataView } from '@metamask/utils';
 
-import { validateBIP44Depth } from './BIP44Node';
-import { compressPublicKey, decompressPublicKey } from './curves/secp256k1';
-import { decodeBase58check, encodeBase58check, isValidBytesKey } from './utils';
+import { validateBIP44Depth } from './BIP44Node.js';
+import { compressPublicKey, decompressPublicKey } from './curves/secp256k1.js';
+import {
+  decodeBase58check,
+  encodeBase58check,
+  isValidBytesKey,
+} from './utils.js';
 
 // https://github.com/bitcoin/bips/blob/274fa400d630ba757bec0c03b35ebe2345197108/bip-0032.mediawiki#Serialization_format
 export const PUBLIC_KEY_VERSION = 0x0488b21e;

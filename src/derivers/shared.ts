@@ -7,12 +7,12 @@ import {
 import { hmac } from '@noble/hashes/hmac';
 import { sha512 } from '@noble/hashes/sha512';
 
-import type { DeriveChildKeyArgs, DerivedKeys } from '.';
-import { BIP_32_HARDENED_OFFSET, UNPREFIXED_PATH_REGEX } from '../constants';
-import type { Curve } from '../curves';
-import { mod } from '../curves';
-import { SLIP10Node } from '../SLIP10Node';
-import { isValidBytesKey, numberToUint32 } from '../utils';
+import { BIP_32_HARDENED_OFFSET, UNPREFIXED_PATH_REGEX } from '../constants.js';
+import type { Curve } from '../curves/index.js';
+import { mod } from '../curves/index.js';
+import { SLIP10Node } from '../SLIP10Node.js';
+import { isValidBytesKey, numberToUint32 } from '../utils.js';
+import type { DeriveChildKeyArgs, DerivedKeys } from './index.js';
 
 type ErrorHandler = (
   error: unknown,

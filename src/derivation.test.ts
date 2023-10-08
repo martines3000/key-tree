@@ -1,13 +1,13 @@
 import { bytesToHex } from '@metamask/utils';
 
-import fixtures from '../test/fixtures';
-import type { HDPathTuple } from './constants';
-import { secp256k1 } from './curves';
-import { deriveKeyFromPath, validatePathSegment } from './derivation';
-import { derivers } from './derivers';
-import { privateKeyToEthAddress } from './derivers/bip32';
-import type { SLIP10Node } from './SLIP10Node';
-import { getUnhardenedBIP32NodeToken, mnemonicPhraseToBytes } from './utils';
+import fixtures from '../test/fixtures.js';
+import type { HDPathTuple } from './constants.js';
+import { secp256k1 } from './curves/index.js';
+import { deriveKeyFromPath, validatePathSegment } from './derivation.js';
+import { privateKeyToEthAddress } from './derivers/bip32.js';
+import { derivers } from './derivers/index.js';
+import type { SLIP10Node } from './SLIP10Node.js';
+import { getUnhardenedBIP32NodeToken, mnemonicPhraseToBytes } from './utils.js';
 
 const {
   bip32: { deriveChildKey: bip32Derive },

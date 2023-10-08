@@ -5,7 +5,7 @@ import {
   utils,
 } from '@noble/secp256k1';
 
-import { isValidBytesKey } from '../utils';
+import { isValidBytesKey } from '../utils.js';
 
 export { CURVE as curve } from '@noble/secp256k1';
 

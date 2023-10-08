@@ -1,6 +1,6 @@
 import { hexToBytes, bytesToHex } from '@metamask/utils';
 
-import fixtures from '../../test/fixtures';
+import fixtures from '../../test/fixtures.js';
 import {
   compressPublicKey,
   curve,
@@ -8,7 +8,7 @@ import {
   getPublicKey,
   isValidPrivateKey,
   publicAdd,
-} from './ed25519';
+} from './ed25519.js';
 
 describe('ed25519', () => {
   describe('curve', () => {
